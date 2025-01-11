@@ -1,0 +1,26 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const app = express();
+const PORT = 5000;
+
+// Middleware
+// app.use(cors());
+app.use(cors({
+    origin: 'https://vercel-learn-frontend.vercel.app',  // Your actual frontend deployment URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
+
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the Simple Express Backend!');
+});
+
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
