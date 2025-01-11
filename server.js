@@ -46,7 +46,7 @@ app.use(bodyParser.json());
 
 
 app.use(cors({
-    origin: 'https://vercel-learn-frontend.vercel.app',  // Your actual frontend deployment URL
+    origin: 'https://hotel-management-app-front.vercel.app/',  // Your actual frontend deployment URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
